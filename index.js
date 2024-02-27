@@ -1,7 +1,7 @@
 let currentQuestion = 0;
 let data = {};
-const db = readFileSync('data.json');
-const jsonData = JSON.parse(db);
+/*const db = readFileSync('data.json');
+const jsonData = JSON.parse(db);*/
 
 function nextQuestion() {
     const current = document.getElementById(`q${currentQuestion}`);

@@ -10,12 +10,13 @@
 <body>
 
     <div id="q0" class="question">
-        <p class="question">Enter?</p>
-        <button onclick="nextQuestion()">Yes</button>
+        <p class="entertext">BCAMSC</p>
+        <p>Math Mania</p>
+        <button onclick="nextQuestion()">Enter?</button>
     </div>
 
     <div id="q1" class="question" style="display: none;">
-        <p class="question">From which house do you hail?</p>
+        <p class="question">Pick your house!</p>
         <div class="button-group">
             <button onclick="selectHouse('Mackinac')">Mackinac</button>
             <button onclick="selectHouse('Keweenaw')">Keweenaw</button>
@@ -27,7 +28,7 @@
     </div>
 
     <div id="q2" class="question" style="display: none;">
-        <p class="question">Name your team</p>
+        <p class="question">Name your team!</p>
         <input type="text" id="teamNameInput">
         <button onclick="submitName()">Next</button>
     </div>

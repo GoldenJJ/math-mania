@@ -1,7 +1,7 @@
 body {
     background-color: rgb(25, 8, 41);
     color: white;
-    font-family: Georgia;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     overflow: hidden;
     display: flex;
@@ -32,6 +32,14 @@ button:hover {
 
 .question {
     font-size: 5vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+.entertext {
+    font-size: 10vh;
+    line-height: 0%;
+    margin-bottom: 0;
 }
 
 div {
