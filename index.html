@@ -1,1 +1,41 @@
-<h1>sup gang</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrance</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <div id="q0" class="question">
+        <p class="question">Enter?</p>
+        <button onclick="nextQuestion()">Yes</button>
+    </div>
+
+    <div id="q1" class="question" style="display: none;">
+        <p class="question">From which house do you hail?</p>
+        <div class="button-group">
+            <button onclick="selectHouse('Mackinac')">Mackinac</button>
+            <button onclick="selectHouse('Keweenaw')">Keweenaw</button>
+            <button onclick="selectHouse('Belle Isle')">Belle Isle</button>
+            <button onclick="selectHouse('Sleeping Bear')">Sleeping Bear</button>
+            <button onclick="selectHouse('Tawas Point')">Tawas Point</button>
+            <button onclick="selectHouse('House 6')">House 6</button>
+        </div>
+    </div>
+
+    <div id="q2" class="question" style="display: none;">
+        <p class="question">Name your team</p>
+        <input type="text" id="teamNameInput">
+        <button onclick="submitName()">Next</button>
+    </div>
+
+    <div id="q3" class="question" style="display: none;">
+        <p class="question">Are you ready to begin?</p>
+        <button onclick="startCompetition()">Yes</button>
+    </div>
+
+</body>
+</html>
