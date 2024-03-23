@@ -12,10 +12,10 @@
     <div id="q0" class="question">
         <p class="entertext">BCAMSC</p>
         <p>Math Mania</p>
-        <button onclick="nextQuestion()">Enter?</button>
+        <button onclick="nameSelect()">Enter?</button>
     </div>
 
-    <div id="q1" class="question" style="display: none;">
+    <!-- <div id="q1" class="question" style="display: none;">
         <p class="question">Pick your house!</p>
         <div class="button-group">
             <button onclick="selectHouse('Mackinac')">Mackinac</button>
@@ -25,17 +25,23 @@
             <button onclick="selectHouse('Tawas Point')">Tawas Point</button>
             <button onclick="selectHouse('Big Sable')">Big Sable</button>
         </div>
-    </div>
+    </div> -->
 
-    <div id="q2" class="question" style="display: none;">
+    <div id="q1" class="question" style="display: none;">
         <p class="question">Name your team!</p>
         <input type="text" id="teamNameInput">
         <button onclick="submitName()">Next</button>
     </div>
 
-    <div id="q3" class="question" style="display: none;">
+    <!-- <div id="q3" class="question" style="display: none;">
         <p class="question">Are you ready to begin?</p>
         <button onclick="startCompetition()">Yes</button>
+    </div> -->
+
+    <div id="question-box">
+        <h2 id="question-statement"></h2>
+        <img src="https://images-cdn.kahoot.it/05c2c186-18b8-45a4-81d8-092bc61f3d21?auto=webp&width=400" id="questionimg"></h2>
+        <div id="answers"></div>
     </div>
 
 </body>

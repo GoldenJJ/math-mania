@@ -3,40 +3,50 @@ let data = {};
 /*const db = readFileSync('data.json');
 const jsonData = JSON.parse(db);*/
 
-function nextQuestion() {
-    const current = document.getElementById(`q${currentQuestion}`);
-    current.style.display = 'none';
-    currentQuestion++;
-    if (currentQuestion < 4) {
-        const next = document.getElementById(`q${currentQuestion}`);
-        next.style.display = 'block';
-    } else {
-        startCompetition();
+let currentQuestionIndex = 0;
+let score = 0;
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
 }
 
-function selectHouse(house) {
-    data.house = house;
-    console.log(data);
-    nextQuestion()
+// Function to display next question
+function displayNextQuestion() {
+    if (currentQuestionIndex < quizQuestions.length) {
+        const currentQuestion = quizQuestions[currentQuestionIndex];
+        document.getElementById('question-statement').textContent = currentQuestion.question;
+        const answersContainer = document.getElementById('answers');
+        answersContainer.innerHTML = '';
+        currentQuestion.answers.forEach((answer, index) => {
+            const answerButton = document.createElement('button');
+            answerButton.textContent = answer;
+            answerButton.addEventListener('click', () => checkAnswer(index));
+            answersContainer.appendChild(answerButton);
+        });
+        currentQuestionIndex++;
+    } else {
+        showScoreScreen();
+    }
+}
+
+
+function nameSelect() {
+    const current = document.getElementById(`q0`);
+    current.style.display = 'none';
+    const teamSelect = document.getElementById(`q1`);
+    teamSelect.style.display = 'block';
 }
 
 function submitName() {
-    const name = document.getElementById(`teamNameInput`).value;
-    data.name = name;
-    let house = data.house;
-
-    jsonData.house.push({
-        name: data.name,
-        points: 0,
-      });
-
-    /*writeFileSync('data.json', JSON.stringify(data));*/
-    console.log(data);
-    nextQuestion()
+    const teamName = document.getElementById(`teamNameInput`).value;
+    console.log(teamName);
+    startCompetition()
 }
 
 function startCompetition() {
-    // Do whatever you need to start the competition
+    teamSelect.style.display = 'none';
     console.log('Competition started!');
 }
