@@ -1,8 +1,11 @@
-let currentQuestion = 0;
-let data = {};
+/* let currentQuestion = 0;
+import questionSet from './questions.json' assert { type: 'json' }; */
+import questionSet from './questions.json';
 /*const db = readFileSync('data.json');
 const jsonData = JSON.parse(db);*/
+console.log(length)
 
+console.log(questionSet)
 let currentQuestionIndex = 0;
 let score = 0;
 
